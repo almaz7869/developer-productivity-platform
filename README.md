@@ -1,18 +1,12 @@
-# Forge — Developer Productivity Platform
+﻿# Forge — Developer Productivity Platform
 
-A responsive, browser-only workbench inspired by the AI developer productivity project description in the resume.
+A React developer workbench with a Spring Boot API for AI-assisted code review, debugging, explanations, test ideas, and interview practice.
 
-## Demo features
+## Stack
+React 19 + Vite; Java 17 + Spring Boot; Spring Security/JWT; Spring Data JPA; MySQL; Spring AI; Docker Compose.
 
-- Switch between code review, debugging, explanation and test idea modes.
-- Inspect a sample code snippet with local heuristic feedback.
-- Save recent demo sessions in browser local storage.
-- View a sample interview practice prompt and hint.
+## Local setup
+Copy `.env.example` to `.env`, set database and login values, and add `AI_API_KEY` for live model features. Run `docker compose up --build`, then open `http://localhost:5173`. API health: `http://localhost:8080/api/health`.
 
-## Run locally
-
-Open `index.html` in a modern browser. No build step is required.
-
-## Deployment
-
-This static prototype can be hosted with GitHub Pages from the repository's root folder. It does not include the Spring Boot API, MySQL database, JWT authentication, or an LLM connection described in the resume. Code analysis uses simple browser-side heuristics and should not be represented as an AI service.
+## Hosted demo
+The GitHub Pages site is a frontend demo using sample inputs and browser-local history. It is not connected to the Spring API yet. Full AI requests require deploying the API and entering a private AI provider key on the backend host.
